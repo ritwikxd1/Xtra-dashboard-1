@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login - XTRA</title>
+    
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Tailwind Config -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        discord: '#5865F2',
+                        discordHover: '#4752C4',
+                        background: '#09090b',
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <style>
+        body {
+            background-color: #09090b;
+            color: #ffffff;
+            font-family: 'Inter', sans-serif;
+        }
+    </style>
+</head>
+<body class="min-h-screen flex items-center justify-center md:justify-end md:pr-[15%] lg:pr-[20%] relative overflow-hidden bg-background">
+    
+    <!-- Top Left Logo -->
+    <div class="fixed top-6 left-6 flex items-center space-x-3 z-50">
+        <img src="/logo.png" alt="Logo" class="w-6 h-6 rounded-full object-cover bg-gray-800">
+        <span class="text-white text-xs font-bold tracking-[0.15em] uppercase">Xtra</span>
+    </div>
+
+    <!-- Left Side Abstract Art (Visual Decor) -->
+    <div class="hidden md:block absolute left-[-150px] top-1/2 -translate-y-1/2 z-0 pointer-events-none">
+        <!-- Soft blurry purple radial gradient glow -->
+        <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[400px] h-[400px] bg-[#3b2866] opacity-30 blur-[100px] rounded-full"></div>
+        
+        <!-- Faint, dark purple 3D geometric shape (crystal/gem) using SVG -->
+        <svg width="450" height="450" viewBox="0 0 400 400" fill="none" xmlns="http://www.w3.org/2000/svg" class="opacity-25 drop-shadow-2xl transform -rotate-[15deg]">
+            <!-- Back facets -->
+            <path d="M200 50 L350 150 L200 350 L50 150 Z" fill="#1e103a"/>
+            <!-- Top facet -->
+            <path d="M200 50 L300 120 L200 180 L100 120 Z" fill="#3b2866"/>
+            <!-- Front left facet -->
+            <path d="M100 120 L200 180 L200 350 L50 150 Z" fill="#2d1b54"/>
+            <!-- Front right facet -->
+            <path d="M200 180 L300 120 L350 150 L200 350 Z" fill="#4a367a"/>
+            <!-- Edge highlights -->
+            <path d="M200 50 L300 120 L200 180 Z" fill="rgba(255,255,255,0.06)"/>
+            <path d="M100 120 L200 180 L200 350 Z" fill="rgba(255,255,255,0.03)"/>
+        </svg>
+    </div>
+
+    <!-- Main Login Container -->
+    <div class="w-full max-w-[380px] px-6 relative z-10">
+        <h1 class="text-[26px] font-bold text-white mb-2 tracking-tight">Welcome Back</h1>
+        <p class="text-[#a1a1aa] text-sm leading-relaxed mb-8">
+            Log in with your Discord account to access your dashboard and manage your servers with ease.
+        </p>
+
+        <a href="/login" class="flex items-center justify-center w-full bg-discord hover:bg-discordHover text-white py-[10px] px-4 rounded-md transition-colors duration-200 text-sm font-medium shadow-md">
+            <i class="fa-brands fa-discord mr-2 text-[18px]"></i>
+            Login with Discord
+        </a>
+
+        <p class="text-[10px] text-[#71717a] mt-5 leading-relaxed">
+            By logging in, you acknowledge that you have read, understood, and agree to be bound by our 
+            <a href="#" class="text-discord hover:underline">Terms of Service</a> and 
+            <a href="#" class="text-discord hover:underline">Privacy Policy</a>.
+        </p>
+    </div>
+
+</body>
+</html>
